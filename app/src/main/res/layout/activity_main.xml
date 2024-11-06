@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/incomeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your income:"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/incomeInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/incomeLabel"
+        android:layout_marginTop="8dp"
+        android:inputType="numberDecimal"
+        android:hint="Income"/>
+
+    <TextView
+        android:id="@+id/rrspLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/incomeInput"
+        android:layout_marginTop="16dp"
+        android:text="Adjust RRSP contribution:"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <SeekBar
+        android:id="@+id/rrspSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rrspLabel"
+        android:layout_marginTop="8dp"
+        android:max="27230"/>
+
+    <TextView
+        android:id="@+id/rrspValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rrspSeekBar"
+        android:layout_marginTop="8dp"
+        android:text="RRSP Contribution: $0.00"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/rrspLimitTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rrspValue"
+        android:layout_marginTop="8dp"
+        android:text="RRSP Contribution Limit for Next Year: $31560.00"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rrspLimitTextView"
+        android:layout_marginTop="20dp"
+        android:text="Calculate Tax"
+        android:background="@color/colorAccent"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:id="@+id/federalTaxTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calculateButton"
+        android:layout_marginTop="16dp"
+        android:text="Federal Tax: $0.00"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/provincialTaxTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/federalTaxTextView"
+        android:layout_marginTop="8dp"
+        android:text="Provincial Tax: $0.00"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/totalTaxTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/provincialTaxTextView"
+        android:layout_marginTop="8dp"
+        android:text="Total Tax: $0.00"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/refreshButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/totalTaxTextView"
+        android:layout_marginTop="20dp"
+        android:text="Refresh"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFFFFF"/>
+</RelativeLayout>
